@@ -14,10 +14,10 @@ for path in paths do
         Error( str );
     else
         Read( filename );
-        Print( "true.\n")
     fi;
 od;
 
+Print( "Functions loaded. \n");
 Unbind( dir );
 Unbind( paths ); 
 Unbind( filename );
