@@ -14,6 +14,7 @@ for path in paths do
         Error( str );
     else
         Read( filename );
+        Print( "true.\n")
     fi;
 od;
 

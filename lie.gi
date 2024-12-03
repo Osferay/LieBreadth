@@ -72,7 +72,8 @@ InstallMethod( StructureMatrices, [IsLieAlgebra], function( L )
 end); 
 
 ###############################################################
-## Function to a basis of the center of a Lie algebra 
+## Function to get the basis elements of a Lie algebra 
+## that are in the center of L.
 ###############################################################
 
 InstallMethod( BasisLieCenter, [IsLieAlgebra], function( L )
@@ -86,6 +87,38 @@ InstallMethod( BasisLieCenter, [IsLieAlgebra], function( L )
 
     B   := BasisVectors(Basis(L));
     C   := BasisVectors(Basis(LieCenter(L)));
+    res := [];
+    pos := [];
+
+    for v in C do
+
+        p := PositionProperty( B, x-> x = v);
+        if not IsBool(p) then
+            Add( res, B[p] );
+            Add( pos, p );
+        fi;
+    od;
+
+    return rec( vectors := res, pos := pos );
+
+end );
+
+###############################################################
+## Function to get the basis elements of a Lie algebra 
+## that are in the derived subalgebra of L.
+###############################################################
+
+InstallMethod( BasisLieDerived, [IsLieAlgebra], function( L )
+
+    local   B,
+            C, 
+            v,
+            p,
+            pos,
+            res;
+
+    B   := BasisVectors(Basis(L));
+    C   := BasisVectors(Basis(LieDerivedSubalgebra(L)));
     res := [];
     pos := [];
 

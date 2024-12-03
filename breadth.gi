@@ -35,7 +35,7 @@ end;
 ## It stops at the first non-trivial minor finded.
 ###############################################################
 
-MatrixMinorsWithInfo := function( M, l, StartRow, NonZeroCols)
+MatrixMinorsWithInfo := function( M, l, NonZeroRows, NonZeroCols)
     local   n,      #Dimension of the matrix M.
             R,      #Combinations of rows for the minors.
             C,      #Combinations of columns for the minors
@@ -46,7 +46,7 @@ MatrixMinorsWithInfo := function( M, l, StartRow, NonZeroCols)
 
 
     n := Length(M);
-    R := Combinations([StartRow..n], l);
+    R := Combinations( NonZeroRows, l);
     C := Combinations( NonZeroCols, l);
     
     for r in R do
@@ -104,7 +104,7 @@ end;
 ## Returns all non-trivial minor finded.
 ###############################################################
 
-AllMatrixMinorsWithInfo := function(  M, l, StartRow, NonZeroCols )
+AllMatrixMinorsWithInfo := function(  M, l, NonZeroRows, NonZeroCols )
     local   n,      #Dimension of the matrix M.
             R,      #Combinations of rows and columns for the minors.
             C,      #Combinations of columns for the minors
@@ -115,7 +115,7 @@ AllMatrixMinorsWithInfo := function(  M, l, StartRow, NonZeroCols )
             det;    #Determinant of N  
     
     n := Length(M);
-    R := Combinations([StartRow..n], l);
+    R := Combinations( NonZeroRows, l);
     C := Combinations( NonZeroCols, l);
     res := [];
     
@@ -188,7 +188,7 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
             adj,            #Adjoint matrix
             StartRow,       #First row to include in the search of minors
             NonZeroCols,    #Non-zero columns of adj
-            CenterCols,     #Corresponding columns to elements of the center
+            NonZeroRows,    #Non-zero rows of adj
             max,            #Maximum breadth
             minors;         #Non-trivial minors in each step
 
@@ -197,7 +197,7 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
     F   := LeftActingDomain(L);
 
     x := List([1..dim], x -> 0);
-    for i in [1..(dim-der)] do
+    for i in Difference( [1..dim], BasisLieDerived(L).pos) do
         x[i] := Indeterminate( F, i );
     od;
     Info( InfoLieBreadth, 1, StringFormatted( "The vector of indeterminates is: {}", x ));
@@ -209,18 +209,14 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
         PrintArray( adj );
     fi;
 
-    StartRow    := dim-der+1;
-    NonZeroCols := [1..dim];
-    CenterCols  := BasisLieCenter(L).pos;
-    for c in CenterCols do
-        RemoveSet( NonZeroCols, c );
-    od;
-    
+    NonZeroRows := BasisLieDerived(L).pos;
+    NonZeroCols := Difference( [1..dim], BasisLieCenter(L).pos);
+
     max := dim - Dimension( LieCenter(L) );
     for i in Reversed([1..max]) do
-
+        Info( InfoLieBreadth, 1, StringFormatted( "Computing minors of dimension: {}", i ) );
         if IsFinite(F) then 
-            minors := AllMatrixMinorsWithInfo( adj, i, StartRow, NonZeroCols);
+            minors := AllMatrixMinorsWithInfo( adj, i, NonZeroRows, NonZeroCols);
                     
             if not IsEmpty( minors ) then
                 for c in [1..Length( minors )] do
@@ -231,7 +227,7 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
                 od;
             fi;
         else 
-            minors := MatrixMinorsWithInfo( adj, i, StartRow, NonZeroCols );
+            minors := MatrixMinorsWithInfo( adj, i, NonZeroRows, NonZeroCols );
 
             if not IsBool( minors ) then
                 return i;
