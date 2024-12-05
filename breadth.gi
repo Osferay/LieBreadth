@@ -221,6 +221,15 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
             if not IsEmpty( minors ) then
                 for c in [1..Length( minors )] do
                     if not VanishingPolyFF( minors[c][1], F, dim-der) then 
+
+                        Info( InfoLieBreadth, 1, StringFormatted( "The non-vanishing minor has polynomial: {}, and the corresponding matrix is;", minors[c][1] ) );
+                        if InfoLevel( InfoLieBreadth ) = 1 then
+                            PrintArray( adj{minors[c][2][1]}{minors[c][2][2]} );
+                        fi;
+                        if not LieClass(L) <= i +1 then
+                            Info( InfoLieBreadth, 1, "This Lie algebra does not hold the class-breadth conjecture" );
+                        fi;
+
                         return i; 
                     fi;
 
