@@ -150,3 +150,22 @@ InstallMethod( LieAdjointMatrix, [IsLieAlgebra], function( L )
     return List( StructureMatrices(L), x -> a*x );
 
 end );
+
+###############################################################
+## Function to print the relaiions of a Lie algebra 
+###############################################################
+
+PrintLiePresentation := function( L )
+
+    local   B,
+            i,j;
+
+    B := BasisVectors( Basis(L) );
+
+    for i in [1..Length(B)-1] do
+        for j in [i+1..Length(B)] do
+            if B[i]*B[j] <> 0*B[i] then
+            Print( StringFormatted( "[{1},{2}] = {3}\n", B[i], B[j], B[i]*B[j] ));
+    fi; od; od;
+
+end;
