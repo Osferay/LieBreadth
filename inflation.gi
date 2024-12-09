@@ -289,7 +289,7 @@ end;
 ## Inflation of L by the extension of M and s
 ###############################################################
 
-Inflation := function( L, M, s )
+LieInflation := function( L, M, s )
 
     local   F,      #Field where L is defined
             Mup,    #Extension of M by A
@@ -344,24 +344,24 @@ LieCoveredInflated := function(n)
     if n = 2 then
 
         M := BasisVectors( Basis(L) ){[1]};
-        L := LieGradedPresentation( Inflation( L, M, L.2 ) );
+        L := LieGradedPresentation( LieInflation( L, M, L.2 ) );
         M := BasisVectors(Basis(L)){[2,3]};
-        L := LieGradedPresentation( Inflation( L, M, L.1 ) );
+        L := LieGradedPresentation( LieInflation( L, M, L.1 ) );
         M := BasisVectors(Basis(L)){[1,3,4,5]};
-        L := LieGradedPresentation( Inflation( L, M, L.1+L.2 ) );
+        L := LieGradedPresentation( LieInflation( L, M, L.1+L.2 ) );
         M := BasisVectors(Basis(L)){[1,3,4,5,6,7,8,9]};
-        L := LieGradedPresentation( Inflation( L, M, L.2 ) );
+        L := LieGradedPresentation( LieInflation( L, M, L.2 ) );
     
     elif n=3 then
         
         M := BasisVectors(Basis(L)){[2]};
-        L := LieGradedPresentation( Inflation( L, M, L.1 ) );
+        L := LieGradedPresentation( LieInflation( L, M, L.1 ) );
         M := BasisVectors(Basis(L)){[1,3,4]};
-        L := LieGradedPresentation( Inflation( L, M, L.1+L.2 ) );
+        L := LieGradedPresentation( LieInflation( L, M, L.1+L.2 ) );
         M := BasisVectors(Basis(L)){Concatenation([1],[3..10])};
-        L := LieGradedPresentation( Inflation( L, M, L.1-L.2 ) );
+        L := LieGradedPresentation( LieInflation( L, M, L.1-L.2 ) );
         M := BasisVectors(Basis(L)){Concatenation([1],[3..28])};
-        L := LieGradedPresentation( Inflation( L, M, L.2 ) );
+        L := LieGradedPresentation( LieInflation( L, M, L.2 ) );
     fi;
 
     return L;
