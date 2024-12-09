@@ -24,7 +24,19 @@ Read( "*Gap Directory*/pkg/LieBreadth/read.g");
 ### breadth.gi: Functions to calculate the extended isolator series:
 - *InfoBreadth* : InfoClass of the function Lie breadth.
 - *LieBreadth( L )* : Returns the breadth of the nilpotent Lie algebra.
+- *IsTrueClassBreadth( L )* : Returns if the class-breadth conjecture is true without calculating the breadth.
+
+### Inflation.gi: Functions to calculate the construct Lie covered algebras via inflation:
+**Warning: These are experimental functions.** For definitions see [A. Caranti, S. Mattarei, and M. F. Newman].
+- *InfoInflation* : InfoClass of the function LieInflation.
+- *LieNilpotentGrading( L )* : Returns a grading resprect to the lower central series of the nilpotent Lie algebra.
+- *LieTwoStepCentralizers( L )* : Returns the two step centralizers of the nilpotent Lie algebra.
+- *IsLieCovered(L)* : Returns whether if the nilpotent Lie algebra is covered.
+- *PolynomialAlgebra(F)* : Returns a polynomial algebra of dimension p-1 for a finite field of dimension p.
+- *LieCoveredInflated(n)* : For n=2,3 returns a covered algebra constructed by inflting all one dimensional subspaces of L1.
+- *LieMinimalQuotientClassBreadth(L)* : Returns the minimal covered Lie algebra constructed by a qoutient of a Lie covered Lie algebra L.
 
 # Cites
 
+> - A. Caranti, S. Mattarei, and M. F. Newman. Graded Lie algebras of maximal class. Trans. Amer. Math. Soc., 349(10):4021–4051, 1997.
 > - B. Eick and O. F. Ayala. 
