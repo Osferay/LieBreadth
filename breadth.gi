@@ -21,9 +21,7 @@ MatrixMinors := function( M, l )
 
             if det <> 0*det then 
                 return [det, [r,c] ]; 
-            fi;
-        od;
-    od;
+    fi; od; od;
 
     return false;
 
@@ -56,9 +54,7 @@ MatrixMinorsWithInfo := function( M, l, NonZeroRows, NonZeroCols)
 
             if det <> 0*det then 
                 return [ det, [r,c] ]; 
-            fi;
-        od;
-    od;
+    fi; od; od;
 
     return false;
 
@@ -90,9 +86,7 @@ AllMatrixMinors := function( M, l )
 
             if det <> 0*det then 
                 Add(res, [det, [r,c] ] ); 
-            fi;
-        od;
-    od;
+    fi; od; od;
 
     return res;
 
@@ -126,9 +120,7 @@ AllMatrixMinorsWithInfo := function(  M, l, NonZeroRows, NonZeroCols )
 
             if det <> 0*det then 
                 Add(res, [ det, [r,c] ]); 
-            fi;
-        od;
-    od;
+    fi; od; od;
 
     return res;
 
@@ -163,8 +155,7 @@ VanishingPolyFF := function( p, F, n )
         if deg >= ord then 
             vp := Indeterminate( F, i )^ord + Indeterminate( F, i );
             Add( I, vp); 
-        fi;
-    od;
+    fi; od;
 
     rp := PolynomialReduction( lp, I, MonomialGrlexOrdering() );
 
@@ -192,6 +183,10 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
             max,            #Maximum breadth
             minors;         #Non-trivial minors in each step
 
+    if IsLieAbelian( L ) then
+        return 0;
+    fi;
+
     dim := Dimension(L);
     der := Dimension( LieDerivedSubalgebra(L) );
     F   := LeftActingDomain(L);
@@ -200,12 +195,12 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
     for i in Difference( [1..dim], BasisLieDerived(L).pos) do
         x[i] := Indeterminate( F, i );
     od;
-    Info( InfoLieBreadth, 1, StringFormatted( "The vector of indeterminates is: {}", x ));
+    Info( InfoLieBreadth, 2, StringFormatted( "The vector of indeterminates is: {}", x ));
 
     adj := List( StructureMatrices(L), i -> x*i );
 
     if InfoLevel( InfoLieBreadth ) = 1 then
-        Info( InfoLieBreadth, 1, "The adjoint matrix is:\n");
+        Info( InfoLieBreadth, 2, "The adjoint matrix is:\n");
         PrintArray( adj );
     fi;
 
@@ -231,19 +226,89 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
                         fi;
 
                         return i; 
-                    fi;
+        fi; od; fi;
 
-                od;
-            fi;
         else 
             minors := MatrixMinorsWithInfo( adj, i, NonZeroRows, NonZeroCols );
 
             if not IsBool( minors ) then
                 return i;
-            fi;
+    fi; fi; od;
+end );
 
-        fi;
+InstallMethod( IsTrueClassBreadth, [IsLieNilpotent], function(L) 
+
+    
+    local   dim,            #Dimension of d
+            der,            #Dimension of the derived subalgebra
+            F,              #Field of the algebra L
+            i, c,           #Bucle variables
+            x,              #Vector of indeterminates 
+            adj,            #Adjoint matrix
+            StartRow,       #First row to include in the search of minors
+            NonZeroCols,    #Non-zero columns of adj
+            NonZeroRows,    #Non-zero rows of adj
+            max,            #Maximum breadth
+            minors;         #Non-trivial minors in each step
+
+    if HasLieBreadth(L) then
+        return LieClass(L) <= LieBreadth(L) +1;
+    fi;
+
+    if IsLieAbelian( L ) then
+        return true;
+    fi;
+
+    dim := Dimension(L);
+    der := Dimension( LieDerivedSubalgebra(L) );
+    F   := LeftActingDomain(L);
+
+    x := List([1..dim], x -> 0);
+    for i in Difference( [1..dim], BasisLieDerived(L).pos) do
+        x[i] := Indeterminate( F, i );
     od;
+    Info( InfoLieBreadth, 2, StringFormatted( "The vector of indeterminates is: {}", x ));
+
+    adj := List( StructureMatrices(L), i -> x*i );
+
+    if InfoLevel( InfoLieBreadth ) = 1 then
+        Info( InfoLieBreadth, 2, "The adjoint matrix is:\n");
+        PrintArray( adj );
+    fi;
+
+    NonZeroRows := BasisLieDerived(L).pos;
+    NonZeroCols := Difference( [1..dim], BasisLieCenter(L).pos);
+
+    max := dim - Dimension( LieCenter(L) );
+    for i in Reversed([1..max]) do
+
+        Info( InfoLieBreadth, 1, StringFormatted( "Computing minors of dimension: {}", i ) );
+        if IsFinite(F) then 
+            if i +1 < LieClass(L) then
+                return false;
+            else 
+                minors := AllMatrixMinorsWithInfo( adj, i, NonZeroRows, NonZeroCols);
+                    
+                if not IsEmpty( minors ) then
+                    for c in [1..Length( minors )] do
+                        if not VanishingPolyFF( minors[c][1], F, dim-der) then 
+
+                            Info( InfoLieBreadth, 1, StringFormatted( "The non-vanishing minor has polynomial: {}, and the corresponding matrix is;", minors[c][1] ) );
+                            if InfoLevel( InfoLieBreadth ) = 1 then
+                                PrintArray( adj{minors[c][2][1]}{minors[c][2][2]} );
+                            fi;
+                            if not LieClass(L) <= i +1 then
+                                Info( InfoLieBreadth, 1, "This Lie algebra does not hold the class-breadth conjecture" );
+                            fi;
+                            SetLieBreadth( L, i);
+                            return true; 
+                        fi; 
+                    od; 
+                fi; 
+            fi;
+        else 
+            return true;
+        fi; od;
 
     return 0;
 end );
