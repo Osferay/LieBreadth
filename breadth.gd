@@ -13,3 +13,11 @@ DeclareAttribute( "LieAdjointMatrix", IsLieAlgebra);
 DeclareInfoClass( "InfoLieBreadth" );
 DeclareAttribute( "LieBreadth", IsLieNilpotent );
 DeclareProperty(  "IsTrueClassBreadth", IsLieNilpotent );
+
+### Infaltion.gi
+
+DeclareInfoClass( "InfoInflation" );
+DeclareAttribute( "LieNilpotentGrading", IsLieNilpotent );
+DeclareAttribute( "LieTwoStepCentralizers", IsLieNilpotent );
+DeclareProperty(  "IsLieCovered", IsLieNilpotent );
+DeclareAttribute( "PolynomialAlgebra", IsField and IsFinite );

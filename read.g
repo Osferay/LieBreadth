@@ -5,7 +5,7 @@ if IsBool( DirectoryContents( dir ) ) then
     Error( "The current directory is empty." );
 fi;
 
-paths := [ "breadth.gd", "lie.gi", "breadth.gi" ];
+paths := [ "breadth.gd", "lie.gi", "breadth.gi", "inflation.gi" ];
 
 for path in paths do
     filename := Filename(dir, path);
