@@ -64,9 +64,7 @@ InstallMethod( StructureMatrices, [IsLieAlgebra], function( L )
             for k in [1..Length(SCT[i][j][1])] do
                 SM[SCT[i][j][1][k]][i][j] := SCT[i][j][2][k];
                 SM[SCT[i][j][1][k]][j][i] := -SCT[i][j][2][k];
-            od;
-        od;
-    od;
+    od; od; od;
 
     return SM;
 end); 
@@ -96,8 +94,7 @@ InstallMethod( BasisLieCenter, [IsLieAlgebra], function( L )
         if not IsBool(p) then
             Add( res, B[p] );
             Add( pos, p );
-        fi;
-    od;
+    fi; od;
 
     return rec( vectors := res, pos := pos );
 
@@ -128,8 +125,7 @@ InstallMethod( BasisLieDerived, [IsLieAlgebra], function( L )
         if not IsBool(p) then
             Add( res, B[p] );
             Add( pos, p );
-        fi;
-    od;
+    fi; od;
 
     return rec( vectors := res, pos := pos );
 
