@@ -131,7 +131,7 @@ end;
 ## The argument n is the number of indeterminates in the poly
 ###############################################################
 
-VanishingPolyFF := function( p, F, n )
+IsVanishingPolynomial := function( p, F, n )
 
     local   ord,    #Order of the field
             I,      #Ideal of vanishing polynomials
@@ -157,9 +157,8 @@ VanishingPolyFF := function( p, F, n )
             Add( I, vp); 
     fi; od;
 
-    rp := PolynomialReduction( lp, I, MonomialGrlexOrdering() );
-
-    if IsZero(rp[1]) then return true; fi;
+    rp := PolynomialReducedRemainder( lp, I, MonomialGrlexOrdering() );
+    if IsZero(rp) then return true; fi;
 
     return false;
 
@@ -198,14 +197,15 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
     Info( InfoLieBreadth, 2, StringFormatted( "The vector of indeterminates is: {}", x ));
 
     adj := List( StructureMatrices(L), i -> x*i );
+    adj := TransposedMat( adj );
 
     if InfoLevel( InfoLieBreadth ) = 1 then
         Info( InfoLieBreadth, 2, "The adjoint matrix is:\n");
         PrintArray( adj );
     fi;
 
-    NonZeroRows := BasisLieDerived(L).pos;
-    NonZeroCols := Difference( [1..dim], BasisLieCenter(L).pos);
+    NonZeroCols := BasisLieDerived(L).pos;
+    NonZeroRows := Difference( [1..dim], BasisLieCenter(L).pos);
 
     max := dim - Dimension( LieCenter(L) );
     for i in Reversed([1..max]) do
@@ -215,7 +215,7 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
                     
             if not IsEmpty( minors ) then
                 for c in [1..Length( minors )] do
-                    if not VanishingPolyFF( minors[c][1], F, dim-der) then 
+                    if not IsVanishingPolynomial( minors[c][1], F, dim-der) then 
 
                         Info( InfoLieBreadth, 1, StringFormatted( "The non-vanishing minor has polynomial: {}, and the corresponding matrix is;", minors[c][1] ) );
                         if InfoLevel( InfoLieBreadth ) = 1 then
@@ -226,6 +226,9 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
                         fi;
 
                         return i; 
+                    else
+
+                        Info( InfoLieBreadth, 1, StringFormatted( "The minor {} vanishes in F.", minors[c][1] ) );
         fi; od; fi;
 
         else 
@@ -291,7 +294,7 @@ InstallMethod( IsTrueClassBreadth, [IsLieNilpotent], function(L)
                     
                 if not IsEmpty( minors ) then
                     for c in [1..Length( minors )] do
-                        if not VanishingPolyFF( minors[c][1], F, dim-der) then 
+                        if not IsVanishingPolynomial( minors[c][1], F, dim-der) then 
 
                             Info( InfoLieBreadth, 1, StringFormatted( "The non-vanishing minor has polynomial: {}, and the corresponding matrix is;", minors[c][1] ) );
                             if InfoLevel( InfoLieBreadth ) = 1 then
@@ -302,6 +305,8 @@ InstallMethod( IsTrueClassBreadth, [IsLieNilpotent], function(L)
                             fi;
                             SetLieBreadth( L, i);
                             return true; 
+                        else
+                            Info( InfoLieBreadth, 1, StringFormatted( "The minor {} vanishes in F.", minors[c][1] ) );
                         fi; 
                     od; 
                 fi; 
