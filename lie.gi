@@ -84,7 +84,7 @@ InstallMethod( BasisLieCenter, [IsLieAlgebra], function( L )
             res;
 
     B   := BasisVectors(Basis(L));
-    C   := BasisVectors(Basis(LieCenter(L)));
+    C   := BasisVectors(CanonicalBasis(LieCenter(L)));
     res := [];
     pos := [];
 
@@ -115,7 +115,7 @@ InstallMethod( BasisLieDerived, [IsLieAlgebra], function( L )
             res;
 
     B   := BasisVectors(Basis(L));
-    C   := BasisVectors(Basis(LieDerivedSubalgebra(L)));
+    C   := BasisVectors(CanonicalBasis(LieDerivedSubalgebra(L)));
     res := [];
     pos := [];
 
