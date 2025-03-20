@@ -1,6 +1,6 @@
 # Introduction
 
-Functions to calculate the breadth of a Lie algebra.
+Functions to calculate the breadth of a Lie algebra. This code complements paper [2]
 To install the functions save the files inside the GAP directory/pkg/LieBreadth and then run in GAP.
 ```
 Read( "*Gap Directory*/pkg/LieBreadth/read.g");
@@ -27,7 +27,7 @@ Read( "*Gap Directory*/pkg/LieBreadth/read.g");
 - *IsTrueClassBreadth( L )* : Returns if the class-breadth conjecture is true without calculating the breadth.
 
 ### Inflation.gi: Functions to calculate the construct Lie covered algebras via inflation:
-**Warning: These are experimental functions.** For definitions see [A. Caranti, S. Mattarei, and M. F. Newman].
+**Warning: These are experimental functions.** For definitions see [1].
 - *InfoInflation* : InfoClass of the function LieInflation.
 - *LieNilpotentGrading( L )* : Returns a grading resprect to the lower central series of the nilpotent Lie algebra.
 - *LieTwoStepCentralizers( L )* : Returns the two step centralizers of the nilpotent Lie algebra.
@@ -38,5 +38,5 @@ Read( "*Gap Directory*/pkg/LieBreadth/read.g");
 
 # Cites
 
-> - A. Caranti, S. Mattarei, and M. F. Newman. Graded Lie algebras of maximal class. Trans. Amer. Math. Soc., 349(10):4021–4051, 1997.
-> - B. Eick and O. F. Ayala. 
+1. A. Caranti, S. Mattarei, and M. F. Newman. Graded Lie algebras of maximal class. Trans. Amer. Math. Soc., 349(10):4021–4051, 1997.
+2. B. Eick and O. Fernández Ayala. On the class-breadth conjecture for algebras and T-groups. Submitted.
