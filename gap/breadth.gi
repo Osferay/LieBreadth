@@ -168,7 +168,7 @@ end;
 ## Method to calculate the breadth of a Lie algebra 
 ###############################################################
 
-InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
+InstallMethod( LieBreadth, "For nilpotent Lie algebras", [IsLieNilpotent], function(L)
 
     local   dim,            #Dimension of d
             der,            #Dimension of the derived subalgebra
@@ -239,7 +239,7 @@ InstallMethod( LieBreadth, [IsLieNilpotent], function(L)
     fi; fi; od;
 end );
 
-InstallMethod( IsTrueClassBreadth, [IsLieNilpotent], function(L) 
+InstallMethod( IsTrueClassBreadth, "For nilpotent Lie algebras", [IsLieNilpotent], function(L) 
 
     
     local   dim,            #Dimension of d

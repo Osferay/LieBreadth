@@ -1,42 +1,36 @@
-# Introduction
+# The GAP 4 package liebreadth
+==================================
 
-Functions to calculate the breadth of a Lie algebra. This code complements paper [2]
-To install the functions save the files inside the GAP directory/pkg/LieBreadth and then run in GAP.
-```
-Read( "*Gap Directory*/pkg/LieBreadth/read.g");
-```
+by Óscar Fernández Ayala <oscar00ayala@gmail.com>
 
-# Contents
+About
+-----
 
-### read.g:       File to read in gap.
+The liebreadth package provides methods to compute the breadth of Lie algebras.
 
-### breadth.gd:      Definition of the functions.
+Installation
+------------
 
-### lie.gi:      Functions to generate the groups used in experiments.
-  - *LieClass( L )* : Retruns the class of the nilpotent Lie algebra L.
-  - *LieType( L )* : Retruns the type of the nilpotent Lie algebra L.
-  - *IsOfMaximalClass( L )* : Retruns whether if the nilpotent Lie algebra L is of maximal class.
-  - *StructureMatrices( L )* : Retruns the structure matrices of the Lie algebra L.
-  - *BasisLieCenter( L )* : Retruns the elements of the basis of L that are in center of L.
-  - *BasisLieDerived( L )* : Retruns the elements of the basis of L that are in the derived subalgebra of L.
-  - *LieAdjointMatrix( L )* : Retruns the adjoint matrix of the Lie algebra L.
+Either place the folder in the pkg subdirectory of your gap folder, or in any other folder where you have write permission. You can verify if GAP recognizes the liebreadth package using the following command:
 
-### breadth.gi: Functions to calculate the extended isolator series:
-- *InfoBreadth* : InfoClass of the function Lie breadth.
-- *LieBreadth( L )* : Returns the breadth of the nilpotent Lie algebra.
-- *IsTrueClassBreadth( L )* : Returns if the class-breadth conjecture is true without calculating the breadth.
+    gap> LoadPackage("liebreadth");
+	─────────────────────────────────────────────────────────────────────────────
+	Loading  liebreadth 0.1 (Computation of the breadth of Lie algebras)
+	by Oscar Fernandez Ayala (https://osferay.github.io/).
+	Homepage: https://osferay.github.io/software/liebreadth
+	Report issues at https://github.com/osferay/LieBreadth/issues
+	─────────────────────────────────────────────────────────────────────────────
+	true
 
-### Inflation.gi: Functions to calculate the construct Lie covered algebras via inflation:
-**Warning: These are experimental functions.** For definitions see [1].
-- *InfoInflation* : InfoClass of the function LieInflation.
-- *LieNilpotentGrading( L )* : Returns a grading resprect to the lower central series of the nilpotent Lie algebra.
-- *LieTwoStepCentralizers( L )* : Returns the two step centralizers of the nilpotent Lie algebra.
-- *IsLieCovered(L)* : Returns whether if the nilpotent Lie algebra is covered.
-- *PolynomialAlgebra(F)* : Returns a polynomial algebra of dimension p-1 for a finite field of dimension p.
-- *LieCoveredInflated(n)* : For n=2,3 returns a covered algebra constructed by inflting all one dimensional subspaces of L1.
-- *LieMinimalQuotientClassBreadth(L)* : Returns the minimal covered Lie algebra constructed by a qoutient of a Lie covered Lie algebra L.
+Support
+-------
 
-# Cites
+Please report any problems you may encounter using liebreadth at
+<https://github.com/osferay/LieBreadth/issues>
 
-1. A. Caranti, S. Mattarei, and M. F. Newman. Graded Lie algebras of maximal class. Trans. Amer. Math. Soc., 349(10):4021–4051, 1997.
-2. B. Eick and O. Fernández Ayala. On the class-breadth conjecture for algebras and T-groups. Submitted.
+
+
+License
+-------
+
+The liebreadth package is licensed under the GNU General Public License v2.0 or later. A copy of this license is included.

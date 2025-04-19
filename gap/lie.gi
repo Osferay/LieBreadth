@@ -2,7 +2,7 @@
 ## Function to calculate the class of a Lie algebra 
 ###############################################################
 
-InstallMethod( LieClass, [IsLieNilpotent], function(L)
+InstallMethod( LieClass, "For nilpotent Lie algebras", [IsLieNilpotent], function(L)
 
     local   lcs;
 
@@ -16,7 +16,7 @@ end);
 ## Function to calculate the type of a Lie algebra 
 ###############################################################
 
-InstallMethod( LieType, [IsLieNilpotent], function(L)
+InstallMethod( LieType, "For nilpotent Lie algebras", [IsLieNilpotent], function(L)
 
     local   lcs,
             l,
@@ -37,7 +37,7 @@ end);
 ## Function to calculate if a Lie algebra is of maximal class
 ###############################################################
 
-InstallMethod( IsOfMaximalClass, [IsLieNilpotent], function( L ) 
+InstallMethod( IsOfMaximalClass, "For nilpotent Lie algebras", [IsLieNilpotent], function( L ) 
 
     return LieClass(L) + 1 = Dimension(L);
 
@@ -47,7 +47,7 @@ end );
 ## Function to calculate the structure matrices of a Lie algebra 
 ###############################################################
 
-InstallMethod( StructureMatrices, [IsLieAlgebra], function( L )
+InstallMethod( StructureMatrices, "For Lie algebras", [IsLieAlgebra], function( L )
 
     local   SCT,
             d,
@@ -74,7 +74,7 @@ end);
 ## that are in the center of L.
 ###############################################################
 
-InstallMethod( BasisLieCenter, [IsLieAlgebra], function( L )
+InstallMethod( BasisLieCenter, "For Lie algebras", [IsLieAlgebra], function( L )
 
     local   B,
             C, 
@@ -105,7 +105,7 @@ end );
 ## that are in the derived subalgebra of L.
 ###############################################################
 
-InstallMethod( BasisLieDerived, [IsLieAlgebra], function( L )
+InstallMethod( BasisLieDerived,"For Lie algebras", [IsLieAlgebra], function( L )
 
     local   B,
             C, 
@@ -135,7 +135,7 @@ end );
 ## Function to calculate the adjoint matrix of a Lie algebra 
 ###############################################################
 
-InstallMethod( LieAdjointMatrix, [IsLieAlgebra], function( L )
+InstallMethod( LieAdjointMatrix, "for Lie algebras", [IsLieAlgebra], function( L )
 
     local   d,
             a;
@@ -151,7 +151,7 @@ end );
 ## Function to print the relaiions of a Lie algebra 
 ###############################################################
 
-PrintLiePresentation := function( L )
+InstallMethod( PrintLiePresentation, "for Lie algebras", [IsLieAlgebra], function( L )
 
     local   B,
             i,j;
@@ -164,4 +164,4 @@ PrintLiePresentation := function( L )
             Print( StringFormatted( "[{1},{2}] = {3}\n", B[i], B[j], B[i]*B[j] ));
     fi; od; od;
 
-end;
+end );

@@ -7,7 +7,7 @@
 ## given by the lower central series.
 ###############################################################
 
-InstallMethod( LieNilpotentGrading, [IsLieNilpotent], function( L )
+InstallMethod( LieNilpotentGrading, "For nilpotent Lie algebras", [IsLieNilpotent], function( L )
 
     local   lcs,    #Lower central series
             grad,   #Grading
@@ -102,7 +102,7 @@ end;
 ## Function to calculate all two-step centralizers
 ###############################################################
 
-InstallMethod( LieTwoStepCentralizers, [IsLieNilpotent], function( L )
+InstallMethod( LieTwoStepCentralizers, "For nilpotent Lie algebras", [IsLieNilpotent], function( L )
 
     local   grad,   #Grading for L
             B,      #Basis of L
@@ -128,7 +128,7 @@ end );
 ## Function to calculate if L is covered
 ###############################################################
 
-InstallMethod( IsLieCovered, [IsLieNilpotent], function( L )
+InstallMethod( IsLieCovered, "For nilpotent Lie algebras", [IsLieNilpotent], function( L )
 
     local   2C, #Two step centralizers
             L1; #First element of the grading of L
@@ -150,7 +150,7 @@ end );
 ## Function to create the polynomial algebra of F 
 ###############################################################
 
-InstallMethod(PolynomialAlgebra, [IsField and IsFinite], function( F )
+InstallMethod(PolynomialAlgebra, "For finite field", [IsField and IsFinite], function( F )
 
     local   T,      #Structure table of the polynomial algebra
             B,      #Basis strings
@@ -331,7 +331,7 @@ end;
 ## Lie algebras coverded constructed by inflation
 ###############################################################
 
-LieCoveredInflated := function(n)
+InstallMethod( LieCoveredInflated, "For a integer", [IsInt], function(n)
 
     local   F,  #Field where the Lie algebra is going to be defined
             L,  #Lie algebra
@@ -365,13 +365,13 @@ LieCoveredInflated := function(n)
     fi;
 
     return L;
-end;
+end );
 
 ###############################################################
 ## Quotients of a covered lie algebra that does not hold CB conjecture
 ###############################################################
 
-LieMinimalQuotientClassBreadth := function( L )
+InstallMethod( LieMinimalQuotientClassBreadth, "For inflated Lie algebras", [IsLieAlgebra], function( L )
 
     local   F,      #Field where the Lie algebra is going to be defined
             q,      #index of the lcs
@@ -383,4 +383,4 @@ LieMinimalQuotientClassBreadth := function( L )
 
     return L/lcs[q];
 
-end;
+end );

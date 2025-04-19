@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE file SYSTEM "bibxmlext.dtd">
+<file>
+
+<entry id="inflation"><article>
+  <author>
+    <name><first>Andrea</first><last>Caranti</last></name>
+    <name><first>Sandro</first><last>Mattarei</last></name>
+    <name><first>Michael Frederick</first><last>Newman</last></name>
+  </author>
+  <title>Graded Lie algebras of maximal class</title>
+  <journal>Transactions of the American Mathematical Society</journal>
+  <year>1997</year>
+  <volume>349</volume>
+  <pages>4021--4051</pages>
+  <mrnumber>1443190</mrnumber>
+  <mrclass>17B50 (17B70)</mrclass>
+</article></entry>
+
+</file>
