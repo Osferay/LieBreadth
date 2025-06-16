@@ -50,6 +50,7 @@ LieGradedPresentation := function(L)
     grad := LieNilpotentGrading( L );
     base := BasisVectors( Basis(L) );
 
+    if not IsOfMaximalClass(L) then Error( "The algebra is not of maximal class."); fi;
     #Find the orders in which the basis vectors appear in the grading
     # and construct the matrix of transformation
     ord := [ Position( base, grad[1][1]), Position( base, grad[1][2]) ];
@@ -65,7 +66,6 @@ LieGradedPresentation := function(L)
         mat[ i+1 ] := x;
 
     od;
-
     ord := [ ord, [1..Length(ord) ] ];
 
     #Transform the structure matrices
@@ -279,8 +279,8 @@ DerivateTensorProduct := function( Mup, B, s)
                 der := Position( Mup, der);
                 Add( dtp, [i, n, [1, der] ] );
             fi;
+            if der = fail then Error(); fi;
     fi; od;
-
     return dtp;
 
 end;
@@ -362,6 +362,17 @@ InstallMethod( LieCoveredInflated, "For a integer", [IsInt], function(n)
         L := LieGradedPresentation( LieInflation( L, M, L.1-L.2 ) );
         M := BasisVectors(Basis(L)){Concatenation([1],[3..28])};
         L := LieGradedPresentation( LieInflation( L, M, L.2 ) );
+
+    elif n=5 then
+        #Six subspaces L.1, L.1+L.2, L.1+2L.2, L.1-L.2, L.1-2L.2, L.2
+        M := BasisVectors( Basis( L ) ){[2]};
+        L := LieGradedPresentation( LieInflation( L, M, L.1 ) );
+        M := BasisVectors( Basis( L ) ){[2..6]};
+        L := LieGradedPresentation( LieInflation( L, M, L.1+L.2 ) );
+        M := BasisVectors( Basis( L ) ){[2..26]};
+        L := LieGradedPresentation( LieInflation( L, M, L.1+2*L.2 ) );
+        M := BasisVectors( Basis( L ) ){[2..126]};
+        L := LieGradedPresentation( LieInflation( L, M, L.1-L.2 ) ); 
     fi;
 
     return L;
