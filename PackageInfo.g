@@ -33,7 +33,7 @@ SourceRepository := rec(
     URL := "https://github.com/Osferay/liebreadth",
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := "https://Osferay.github.io/research/software/liebreadth/",
+PackageWWWHome  := "https://Osferay.github.io/research/software/liebreadth",
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 README_URL      := Concatenation( ~.PackageWWWHome, "README.md" ),
 ArchiveURL      := Concatenation( ~.SourceRepository.URL,
