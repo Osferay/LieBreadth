@@ -317,3 +317,15 @@ InstallMethod( IsTrueClassBreadth, "For nilpotent Lie algebras", [IsLieNilpotent
 
     return 0;
 end );
+
+InstallGlobalFunction( TGroupBreadth,
+    function( G )
+        local   mo,
+                L;
+
+        mo := MalcevObjectByTGroup( G );
+        L  := UnderlyingLieAlgebra( mo );
+
+        return LieBreadth( L );               
+                
+end );

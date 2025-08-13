@@ -5,8 +5,12 @@
 # metadata in PackageInfo.g.
 #
 LoadPackage( "liebreadth" );
+LoadPackage( "guarana" );
 
-TestDirectory(DirectoriesPackageLibrary( "liebreadth", "tst" ),
-  rec(exitGAP := true));
+dir := DirectoriesPackageLibrary( "liebreadth", "tst" );
+tst := [ "T.tst" ];
+  
+tst := List( tst, x -> Filename( dir, x ) );
+TestDirectory( tst, rec(exitGAP := true) );
 
 FORCE_QUIT_GAP(1); # if we ever get here, there was an error

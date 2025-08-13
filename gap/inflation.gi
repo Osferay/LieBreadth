@@ -373,6 +373,10 @@ InstallMethod( LieCoveredInflated, "For a integer", [IsInt], function(n)
         L := LieGradedPresentation( LieInflation( L, M, L.1+2*L.2 ) );
         M := BasisVectors( Basis( L ) ){[2..126]};
         L := LieGradedPresentation( LieInflation( L, M, L.1-L.2 ) ); 
+        M := BasisVectors( Basis( L ) ){[2..626]};
+        L := LieGradedPresentation( LieInflation( L, M, L.1-2*L.2 ) ); 
+    else
+        Error( "This function is only available for n = 2, 3, 5.");
     fi;
 
     return L;
