@@ -1,0 +1,26 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XBasisLieCenter[102X, for IsLieAlgebra 2.1-5 
+  [2XBasisLieDerived[102X, for IsLieAlgebra 2.1-6 
+  [2XInfoInflation[102X 2.3-1 
+  [2XInfoLieBreadth[102X 2.2-1 
+  [2XIsLieCovered[102X, for IsLieNilpotent 2.3-4 
+  [2XIsOfMaximalClass[102X, for IsLieNilpotent 2.1-3 
+  [2XIsTrueClassBreadth[102X, for IsLieNilpotent 2.2-3 
+  [2XLieAdjointMatrix[102X, for IsLieAlgebra 2.1-7 
+  [2XLieBreadth[102X, for IsLieNilpotent 2.2-2 
+  [2XLieClass[102X, for IsLieNilpotent 2.1-1 
+  [2XLieCoveredInflated[102X, for IsInt 2.3-6 
+  [2XLieMinimalQuotientClassBreadth[102X, for IsLieAlgebra 2.3-7 
+  [2XLieNilpotentGrading[102X, for IsLieNilpotent 2.3-2 
+  [2XLieTwoStepCentralizers[102X, for IsLieNilpotent 2.3-3 
+  [2XLieType[102X, for IsLieNilpotent 2.1-2 
+  [2XPolynomialAlgebra[102X, for IsField and IsFinite 2.3-5 
+  [2XPrintLiePresentation[102X, for IsLieAlgebra 2.1-8 
+  [2XStructureMatrices[102X, for IsLieAlgebra 2.1-4 
+  [2XTGroupBreadth[102X 2.2-4 
+  
+  
+  -------------------------------------------------------

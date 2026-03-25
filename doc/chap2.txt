@@ -1,0 +1,168 @@
+  
+  [1X2 [33X[0;0YLie algebras and breadth[133X[101X
+  
+  
+  [1X2.1 [33X[0;0YAttributes[133X[101X
+  
+  [1X2.1-1 LieClass[101X
+  
+  [33X[1;0Y[29X[2XLieClass[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YComputes the class of the nilpotent Lie algebra [23XL[123X.[133X
+  
+  [1X2.1-2 LieType[101X
+  
+  [33X[1;0Y[29X[2XLieType[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YComputes the type of the nilpotent Lie algebra [23XL[123X.[133X
+  
+  [1X2.1-3 IsOfMaximalClass[101X
+  
+  [33X[1;0Y[29X[2XIsOfMaximalClass[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YReturns whether the nilpotent Lie algebra [23XL[123X is of maximal class or not.[133X
+  
+  [1X2.1-4 StructureMatrices[101X
+  
+  [33X[1;0Y[29X[2XStructureMatrices[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YComputes the structure matrices of the nilpotent Lie algebra [23XL[123X.[133X
+  
+  [1X2.1-5 BasisLieCenter[101X
+  
+  [33X[1;0Y[29X[2XBasisLieCenter[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns  the  elements  of the basis Lie algebra [23XL[123X that are contained in the
+  center of [23XL[123X.[133X
+  
+  [1X2.1-6 BasisLieDerived[101X
+  
+  [33X[1;0Y[29X[2XBasisLieDerived[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns  the  elements  of the basis Lie algebra [23XL[123X that are contained in the
+  derived subalgebra of [23XL[123X.[133X
+  
+  [1X2.1-7 LieAdjointMatrix[101X
+  
+  [33X[1;0Y[29X[2XLieAdjointMatrix[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YComputes the adjoint matrix of the Lie algebra [23XL[123X.[133X
+  
+  [1X2.1-8 PrintLiePresentation[101X
+  
+  [33X[1;0Y[29X[2XPrintLiePresentation[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YPrints the Lie presentation of the Lie algebra [23XL[123X.[133X
+  
+  
+  [1X2.2 [33X[0;0YBreadth[133X[101X
+  
+  [1X2.2-1 InfoLieBreadth[101X
+  
+  [33X[1;0Y[29X[2XInfoLieBreadth[102X [32X info class[133X
+  
+  [33X[0;0YInfo class for the functions of the breadth of Lie algebras.[133X
+  
+  [1X2.2-2 LieBreadth[101X
+  
+  [33X[1;0Y[29X[2XLieBreadth[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YComputes the breadth of the Lie algebra [23XL[123X.[133X
+  
+  [1X2.2-3 IsTrueClassBreadth[101X
+  
+  [33X[1;0Y[29X[2XIsTrueClassBreadth[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YReturns whether the Lie algebra [23XL[123X holds the class-breadth conjecture or not.[133X
+  
+  [1X2.2-4 TGroupBreadth[101X
+  
+  [33X[1;0Y[29X[2XTGroupBreadth[102X( [3XG[103X ) [32X function[133X
+  
+  [33X[0;0YComputes the breadth of the T-groupo [23XG[123X.[133X
+  
+  
+  [1X2.3 [33X[0;0YInflation of Lie algebras[133X[101X
+  
+  [33X[0;0YA  grading  for a Lie algebra [23XL[123X is a decomposition L = [23X\bigoplus_{i=1}^n L_i[123X
+  that  respects  the  Lie  bracket,  [13Xi.e.[113X  [23X[L_i,L_j]\subseteq  L_{i+j}[123X.}. Any
+  nilpotent    Lie    algebras    can    be    graded    by   taking   [23XL_i   =
+  \gamma_i(L)/\gamma_{i+1}(L)[123X.  Let  [23XL[123X  be  a nilpotent Lie algebra of maximal
+  class.  The  two-step centralizers are the sets [23XC_i = C_{L_1}(L_i) = \{x \in
+  L_1    \mid   [x,L_i]   =   0   \}[123X   for   all   [23X2\leq   i   \leq   c[123X.   Let
+  [23X\mathcal{C}=\{C_i\}\setminus L_1[123X, we say that a Lie algebra of maximal class
+  is  covered  if the set [23X\mathcal{C}[123X consist of all one-dimensional subspaces
+  of [23XL_1[123X.[133X
+  
+  [33X[0;0YLet [23XL[123X be a graded Lie algebra [23XL = \bigoplus_{i=1}^n L_i[123X over [23XK=\F_q[123X for some
+  prime  power  [23Xq=p^n[123X.  Consider  the field extension [23XA=K[\varepsilon]/\langle
+  \varepsilon^p  \rangle[123X  which  is  a vector space over [23XK[123X of dimension [23Xp[123X. The
+  algebra  [23XA[123X  is  an  associative,  commutative  and  has  a unit. The algebra
+  [23XL\otimes A[123X over [23XK[123X defined by [23X[x\otimes a, y\otimes b] = [x,y]\otimes ab[123X is a
+  graded  Lie  algebra.  Let  [23XM[123X  be  a maximal ideal of [23XL[123X and consider the Lie
+  subalgebra  [23XM^\uparrow = M\otimes A[123X. Let [23XD[123X be a derivation of [23XL[123X of degree 1.
+  Define   [23XD^\uparrow[123X   via:   [23XD^\uparrow(x\otimes  \varepsilon^i)=D(x)\otimes
+  \varepsilon^i[123X,  this  is  a derivation of [23XM^\uparrow[123X of degree 1. Define the
+  derivation   [23XE\in   \Der   M^\uparrow[123X   by   [23XE(x\otimes   \varepsilon^i)   =
+  D^\uparrow(x\otimes\varepsilon^i\cdot\varepsilon^{p-1})+1\otimes\partial_\varepsilon(\varepsilon^i)[123X.
+  Let  [23Xs\in  L_1\setminus  M[123X, take [23XD=\mathrm{ad}_s[123X, and extend it naturally to
+  [23XM^\uparrow[123X. Denote [23XE_{s^\prime}[123X as previously. The [13Xinflation[113X [23X{}^{M}L[123X of [23XL[123X at
+  [23XM[123X  by [23Xs\in L_1\setminus M[123X is the graded Lie algebra obtained as an extension
+  of  [23XM^\uparrow[123X  by  an  element  [23Xs^\prime[123X,  which is the extension of [23Xs[123X that
+  induces the derivation [23XE_{s^\prime}[123X, that is,[133X
+  
+  
+  [24X[33X[0;6Y[x\otimes      a,     s^\prime]     =     E_{s^\prime}(x\otimes     a)     =
+  \mathrm{ad}_{s^\prime}(x\otimes\varepsilon^i)+x\otimes\partial_\varepsilon(\varepsilon^i).[133X
+  
+  [124X
+  
+  [1X2.3-1 InfoInflation[101X
+  
+  [33X[1;0Y[29X[2XInfoInflation[102X [32X info class[133X
+  
+  [33X[0;0YInfo class for the functions of the inflation of Lie algebras.[133X
+  
+  [1X2.3-2 LieNilpotentGrading[101X
+  
+  [33X[1;0Y[29X[2XLieNilpotentGrading[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YComputes  a  grading  of the nilpotent Lie algebra [23XL[123X using the lower central
+  series.[133X
+  
+  [1X2.3-3 LieTwoStepCentralizers[101X
+  
+  [33X[1;0Y[29X[2XLieTwoStepCentralizers[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YComputes the two step centralizers of the Lie algebra [23XL[123X.[133X
+  
+  [1X2.3-4 IsLieCovered[101X
+  
+  [33X[1;0Y[29X[2XIsLieCovered[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YReturns whether the Lie algebra [23XL[123X is covered or not.[133X
+  
+  [1X2.3-5 PolynomialAlgebra[101X
+  
+  [33X[1;0Y[29X[2XPolynomialAlgebra[102X( [3XF[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor a finite field [23XF[123X computes the polynomial algebra [23XF[x][123X.[133X
+  
+  [1X2.3-6 LieCoveredInflated[101X
+  
+  [33X[1;0Y[29X[2XLieCoveredInflated[102X( [3Xn[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  [23Xn=2,3,4[123X  computes  the  covered Lie algebras of maximal class using the
+  polynomial  algebra  of  dimension  [23Xn[123X. For n=3 one can directly load the Lie
+  algebra by reading the file "inflation_3.g".[133X
+  
+  [1X2.3-7 LieMinimalQuotientClassBreadth[101X
+  
+  [33X[1;0Y[29X[2XLieMinimalQuotientClassBreadth[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YGiven  a  covered  Lie  algebras  of  maximal  class  [23XL[123X computes the minimal
+  quotient that not holds the class-breadth conjecture.[133X
+  

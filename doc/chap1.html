@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (liebreadth) - Chapter 1: Preface</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap1"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap0.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap2.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap1_mj.html">[MathJax on]</a></p>
+<p><a id="X874E1D45845007FE" name="X874E1D45845007FE"></a></p>
+<div class="ChapSects"><a href="chap1.html#X874E1D45845007FE">1 <span class="Heading">Preface</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X7DFB63A97E67C0A1">1.1 <span class="Heading">Introduction</span></a>
+</span>
+</div>
+</div>
+
+<h3>1 <span class="Heading">Preface</span></h3>
+
+<p>In this package we compute the breadth of Lie algebras. This package also include functions to compute covered Lie algebras of maximal class using a proces called inflation, this is described by Caranti, Mattarei, and Newman <a href="chapBib.html#biBinflation">[CMN97]</a>.</p>
+
+<p><a id="X7DFB63A97E67C0A1" name="X7DFB63A97E67C0A1"></a></p>
+
+<h4>1.1 <span class="Heading">Introduction</span></h4>
+
+<p>Given a Lie algebra <span class="Math">L</span>, we define its lower central series as <span class="Math">L = L^1 &gt; L^2 &gt; \dots</span>, where <span class="Math">L^{i+1} = L^i L</span>. The algebra <span class="Math">L</span> is nilpotent if there exists <span class="Math">c \in \N</span> such that <span class="Math">L^{c+1} = {0}</span>, and the minimal such <span class="Math">c</span> is called the class <span class="Math">\mathrm{cl}(L)</span> of <span class="Math">L</span>. For a nilpotent Lie algebra <span class="Math">L</span>, the type of <span class="Math">L</span> is the vector <span class="Math">(d_1,\dots,d_c)</span>, where <span class="Math">d_i = \dim L^i</span>. A nilpotent Lie algebra <span class="Math">L</span> is said to be of maximal class if the type of <span class="Math">L</span> is <span class="Math">(2,1,\dots,1)</span>. The centralizer of <span class="Math">x \in L</span> is the subspace of <span class="Math">L</span> defined by <span class="Math">C_L(x) = \{a \in L \mid ax = 0\}</span>. For an algebra <span class="Math">L</span>, we define</p>
+
+<p class="pcenter"> \mathrm{br}(L) = \max \{ \mathrm{br}(x) \mid x \in L\}, \;\; \mbox{ where } \;\; \mathrm{br}(x) = \dim(L) - \dim(C_L(x)). </p>
+
+<p>The class-breadth conjecture asserts that <span class="Math">\mathrm{cl}(L) \leq \mathrm{br}(L)+1</span> for an algebra <span class="Math">L</span>. This holds for nilpotent Lie algebras over infinite fields and for nilpotent associative algebras over arbitrary fields.</p>
+
+<p>Let <span class="Math">L</span> be a Lie algebra over a field <span class="Math">K</span>, and let <span class="Math">B = \{ b_1, \ldots, b_n \}</span> be a basis of <span class="Math">L</span>. The multiplication in <span class="Math">L</span> is described by structure constants</p>
+
+<p class="pcenter"> b_i \cdot b_j = \sum_{k=1}^n c_{ijk} b_k \quad 1\leq i,j \leq n. </p>
+
+<p>For each <span class="Math">k</span>, write <span class="Math">C_k = (c_{ijk})_{1 \leq i,j \leq n}</span> for the <span class="Math">n \times n</span> matrix over <span class="Math">K</span> with entries <span class="Math">c_{ijk}</span>, these matrices are the structure matrices of <span class="Math">L</span>. For <span class="Math">x = x_1 b_1 + \ldots + x_n b_n \in L</span>, let <span class="Math">\overline{x} = (x_1, \ldots, x_n) \in K^n</span> denote the coefficient vector of <span class="Math">x</span>. Then <span class="Math">C_k \overline{x}^{tr}</span> is a column vector over <span class="Math">K</span>. We write <span class="Math">M_B(x)</span> for the <span class="Math">n \times n</span> matrix over <span class="Math">K</span> whose <span class="Math">k</span>-th column is <span class="Math">C_k \overline{x}^{tr}</span>, this is the adjoint matrix of <span class="Math">L</span> with respect to the basis <span class="Math">B</span>.</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap0.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap2.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

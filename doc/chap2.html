@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (liebreadth) - Chapter 2: Lie algebras and breadth</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap2"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap2_mj.html">[MathJax on]</a></p>
+<p><a id="X8180FB547D5676E4" name="X8180FB547D5676E4"></a></p>
+<div class="ChapSects"><a href="chap2.html#X8180FB547D5676E4">2 <span class="Heading">Lie algebras and breadth</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7C701DBF7BAE649A">2.1 <span class="Heading">Attributes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X829CF8CB7B08852D">2.1-1 LieClass</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X86E34A087C73F4D4">2.1-2 LieType</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CC91C177F001E7C">2.1-3 IsOfMaximalClass</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X855BD6DB7CA138C6">2.1-4 StructureMatrices</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X84C91702821B9D8F">2.1-5 BasisLieCenter</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X79539FB282963F71">2.1-6 BasisLieDerived</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X794FAF3F8277235F">2.1-7 LieAdjointMatrix</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X80F94DFF78B2777A">2.1-8 PrintLiePresentation</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X8648E5BC79C8AEA8">2.2 <span class="Heading">Breadth</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X82F4EEAD7DFC6470">2.2-1 InfoLieBreadth</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C093B047BA37D4A">2.2-2 LieBreadth</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X86CB363980B40569">2.2-3 IsTrueClassBreadth</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7F177A627B2917E9">2.2-4 TGroupBreadth</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X79E2250284B5313A">2.3 <span class="Heading">Inflation of Lie algebras</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7B546C44790587C4">2.3-1 InfoInflation</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X821797467A3A523E">2.3-2 LieNilpotentGrading</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X85CE14C17816A97D">2.3-3 LieTwoStepCentralizers</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7E24E6DF824913CD">2.3-4 IsLieCovered</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7F13AC8581C578E0">2.3-5 PolynomialAlgebra</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X86B86B1784C39326">2.3-6 LieCoveredInflated</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X828D60C387E6060B">2.3-7 LieMinimalQuotientClassBreadth</a></span>
+</div></div>
+</div>
+
+<h3>2 <span class="Heading">Lie algebras and breadth</span></h3>
+
+<p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
+
+<h4>2.1 <span class="Heading">Attributes</span></h4>
+
+<p><a id="X829CF8CB7B08852D" name="X829CF8CB7B08852D"></a></p>
+
+<h5>2.1-1 LieClass</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieClass</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes the class of the nilpotent Lie algebra <span class="Math">L</span>.</p>
+
+<p><a id="X86E34A087C73F4D4" name="X86E34A087C73F4D4"></a></p>
+
+<h5>2.1-2 LieType</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieType</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes the type of the nilpotent Lie algebra <span class="Math">L</span>.</p>
+
+<p><a id="X7CC91C177F001E7C" name="X7CC91C177F001E7C"></a></p>
+
+<h5>2.1-3 IsOfMaximalClass</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsOfMaximalClass</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
+
+<p>Returns whether the nilpotent Lie algebra <span class="Math">L</span> is of maximal class or not.</p>
+
+<p><a id="X855BD6DB7CA138C6" name="X855BD6DB7CA138C6"></a></p>
+
+<h5>2.1-4 StructureMatrices</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; StructureMatrices</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes the structure matrices of the nilpotent Lie algebra <span class="Math">L</span>.</p>
+
+<p><a id="X84C91702821B9D8F" name="X84C91702821B9D8F"></a></p>
+
+<h5>2.1-5 BasisLieCenter</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BasisLieCenter</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns the elements of the basis Lie algebra <span class="Math">L</span> that are contained in the center of <span class="Math">L</span>.</p>
+
+<p><a id="X79539FB282963F71" name="X79539FB282963F71"></a></p>
+
+<h5>2.1-6 BasisLieDerived</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BasisLieDerived</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns the elements of the basis Lie algebra <span class="Math">L</span> that are contained in the derived subalgebra of <span class="Math">L</span>.</p>
+
+<p><a id="X794FAF3F8277235F" name="X794FAF3F8277235F"></a></p>
+
+<h5>2.1-7 LieAdjointMatrix</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieAdjointMatrix</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes the adjoint matrix of the Lie algebra <span class="Math">L</span>.</p>
+
+<p><a id="X80F94DFF78B2777A" name="X80F94DFF78B2777A"></a></p>
+
+<h5>2.1-8 PrintLiePresentation</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PrintLiePresentation</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Prints the Lie presentation of the Lie algebra <span class="Math">L</span>.</p>
+
+<p><a id="X8648E5BC79C8AEA8" name="X8648E5BC79C8AEA8"></a></p>
+
+<h4>2.2 <span class="Heading">Breadth</span></h4>
+
+<p><a id="X82F4EEAD7DFC6470" name="X82F4EEAD7DFC6470"></a></p>
+
+<h5>2.2-1 InfoLieBreadth</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoLieBreadth</code></td><td class="tdright">(&nbsp;info class&nbsp;)</td></tr></table></div>
+<p>Info class for the functions of the breadth of Lie algebras.</p>
+
+<p><a id="X7C093B047BA37D4A" name="X7C093B047BA37D4A"></a></p>
+
+<h5>2.2-2 LieBreadth</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieBreadth</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes the breadth of the Lie algebra <span class="Math">L</span>.</p>
+
+<p><a id="X86CB363980B40569" name="X86CB363980B40569"></a></p>
+
+<h5>2.2-3 IsTrueClassBreadth</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTrueClassBreadth</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
+
+<p>Returns whether the Lie algebra <span class="Math">L</span> holds the class-breadth conjecture or not.</p>
+
+<p><a id="X7F177A627B2917E9" name="X7F177A627B2917E9"></a></p>
+
+<h5>2.2-4 TGroupBreadth</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; TGroupBreadth</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Computes the breadth of the T-groupo <span class="Math">G</span>.</p>
+
+<p><a id="X79E2250284B5313A" name="X79E2250284B5313A"></a></p>
+
+<h4>2.3 <span class="Heading">Inflation of Lie algebras</span></h4>
+
+<p>A grading for a Lie algebra <span class="Math">L</span> is a decomposition L = <span class="Math">\bigoplus_{i=1}^n L_i</span> that respects the Lie bracket, <em>i.e.</em> <span class="Math">[L_i,L_j]\subseteq L_{i+j}</span>.}. Any nilpotent Lie algebras can be graded by taking <span class="Math">L_i = \gamma_i(L)/\gamma_{i+1}(L)</span>. Let <span class="Math">L</span> be a nilpotent Lie algebra of maximal class. The two-step centralizers are the sets <span class="Math">C_i = C_{L_1}(L_i) = \{x \in L_1 \mid [x,L_i] = 0 \}</span> for all <span class="Math">2\leq i \leq c</span>. Let <span class="Math">\mathcal{C}=\{C_i\}\setminus L_1</span>, we say that a Lie algebra of maximal class is covered if the set <span class="Math">\mathcal{C}</span> consist of all one-dimensional subspaces of <span class="Math">L_1</span>.</p>
+
+<p>Let <span class="Math">L</span> be a graded Lie algebra <span class="Math">L = \bigoplus_{i=1}^n L_i</span> over <span class="Math">K=\F_q</span> for some prime power <span class="Math">q=p^n</span>. Consider the field extension <span class="Math">A=K[\varepsilon]/\langle \varepsilon^p \rangle</span> which is a vector space over <span class="Math">K</span> of dimension <span class="Math">p</span>. The algebra <span class="Math">A</span> is an associative, commutative and has a unit. The algebra <span class="Math">L\otimes A</span> over <span class="Math">K</span> defined by <span class="Math">[x\otimes a, y\otimes b] = [x,y]\otimes ab</span> is a graded Lie algebra. Let <span class="Math">M</span> be a maximal ideal of <span class="Math">L</span> and consider the Lie subalgebra <span class="Math">M^\uparrow = M\otimes A</span>. Let <span class="Math">D</span> be a derivation of <span class="Math">L</span> of degree 1. Define <span class="Math">D^\uparrow</span> via: <span class="Math">D^\uparrow(x\otimes \varepsilon^i)=D(x)\otimes \varepsilon^i</span>, this is a derivation of <span class="Math">M^\uparrow</span> of degree 1. Define the derivation <span class="Math">E\in \Der M^\uparrow</span> by <span class="Math">E(x\otimes \varepsilon^i) = D^\uparrow(x\otimes\varepsilon^i\cdot\varepsilon^{p-1})+1\otimes\partial_\varepsilon(\varepsilon^i)</span>. Let <span class="Math">s\in L_1\setminus M</span>, take <span class="Math">D=\mathrm{ad}_s</span>, and extend it naturally to <span class="Math">M^\uparrow</span>. Denote <span class="Math">E_{s^\prime}</span> as previously. The <em>inflation</em> <span class="Math">{}^{M}L</span> of <span class="Math">L</span> at <span class="Math">M</span> by <span class="Math">s\in L_1\setminus M</span> is the graded Lie algebra obtained as an extension of <span class="Math">M^\uparrow</span> by an element <span class="Math">s^\prime</span>, which is the extension of <span class="Math">s</span> that induces the derivation <span class="Math">E_{s^\prime}</span>, that is,</p>
+
+<p class="pcenter"> [x\otimes a, s^\prime] = E_{s^\prime}(x\otimes a) = \mathrm{ad}_{s^\prime}(x\otimes\varepsilon^i)+x\otimes\partial_\varepsilon(\varepsilon^i). </p>
+
+<p><a id="X7B546C44790587C4" name="X7B546C44790587C4"></a></p>
+
+<h5>2.3-1 InfoInflation</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoInflation</code></td><td class="tdright">(&nbsp;info class&nbsp;)</td></tr></table></div>
+<p>Info class for the functions of the inflation of Lie algebras.</p>
+
+<p><a id="X821797467A3A523E" name="X821797467A3A523E"></a></p>
+
+<h5>2.3-2 LieNilpotentGrading</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieNilpotentGrading</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes a grading of the nilpotent Lie algebra <span class="Math">L</span> using the lower central series.</p>
+
+<p><a id="X85CE14C17816A97D" name="X85CE14C17816A97D"></a></p>
+
+<h5>2.3-3 LieTwoStepCentralizers</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieTwoStepCentralizers</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes the two step centralizers of the Lie algebra <span class="Math">L</span>.</p>
+
+<p><a id="X7E24E6DF824913CD" name="X7E24E6DF824913CD"></a></p>
+
+<h5>2.3-4 IsLieCovered</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLieCovered</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
+
+<p>Returns whether the Lie algebra <span class="Math">L</span> is covered or not.</p>
+
+<p><a id="X7F13AC8581C578E0" name="X7F13AC8581C578E0"></a></p>
+
+<h5>2.3-5 PolynomialAlgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PolynomialAlgebra</code>( <var class="Arg">F</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>For a finite field <span class="Math">F</span> computes the polynomial algebra <span class="Math">F[x]</span>.</p>
+
+<p><a id="X86B86B1784C39326" name="X86B86B1784C39326"></a></p>
+
+<h5>2.3-6 LieCoveredInflated</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieCoveredInflated</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>For <span class="Math">n=2,3,4</span> computes the covered Lie algebras of maximal class using the polynomial algebra of dimension <span class="Math">n</span>. For n=3 one can directly load the Lie algebra by reading the file "inflation_3.g".</p>
+
+<p><a id="X828D60C387E6060B" name="X828D60C387E6060B"></a></p>
+
+<h5>2.3-7 LieMinimalQuotientClassBreadth</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieMinimalQuotientClassBreadth</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Given a covered Lie algebras of maximal class <span class="Math">L</span> computes the minimal quotient that not holds the class-breadth conjecture.</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

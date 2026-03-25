@@ -1,0 +1,47 @@
+  
+  [1X1 [33X[0;0YPreface[133X[101X
+  
+  [33X[0;0YIn  this  package  we compute the breadth of Lie algebras. This package also
+  include  functions  to compute covered Lie algebras of maximal class using a
+  proces  called inflation, this is described by Caranti, Mattarei, and Newman
+  [CMN97].[133X
+  
+  
+  [1X1.1 [33X[0;0YIntroduction[133X[101X
+  
+  [33X[0;0YGiven a Lie algebra [23XL[123X, we define its lower central series as [23XL = L^1 > L^2 >
+  \dots[123X,  where  [23XL^{i+1} = L^i L[123X. The algebra [23XL[123X is nilpotent if there exists [23Xc
+  \in  \N[123X  such that [23XL^{c+1} = {0}[123X, and the minimal such [23Xc[123X is called the class
+  [23X\mathrm{cl}(L)[123X  of  [23XL[123X.  For  a nilpotent Lie algebra [23XL[123X, the type of [23XL[123X is the
+  vector  [23X(d_1,\dots,d_c)[123X,  where [23Xd_i = \dim L^i[123X. A nilpotent Lie algebra [23XL[123X is
+  said  to  be  of  maximal  class  if  the  type  of  [23XL[123X is [23X(2,1,\dots,1)[123X. The
+  centralizer  of  [23Xx  \in L[123X is the subspace of [23XL[123X defined by [23XC_L(x) = \{a \in L
+  \mid ax = 0\}[123X. For an algebra [23XL[123X, we define[133X
+  
+  
+  [24X[33X[0;6Y\mathrm{br}(L)  = \max \{ \mathrm{br}(x) \mid x \in L\}, \;\; \mbox{ where }
+  \;\; \mathrm{br}(x) = \dim(L) - \dim(C_L(x)).[133X
+  
+  [124X
+  
+  [33X[0;0YThe    class-breadth    conjecture    asserts   that   [23X\mathrm{cl}(L)   \leq
+  \mathrm{br}(L)+1[123X  for  an  algebra  [23XL[123X. This holds for nilpotent Lie algebras
+  over  infinite  fields and for nilpotent associative algebras over arbitrary
+  fields.[133X
+  
+  [33X[0;0YLet [23XL[123X be a Lie algebra over a field [23XK[123X, and let [23XB = \{ b_1, \ldots, b_n \}[123X be
+  a basis of [23XL[123X. The multiplication in [23XL[123X is described by structure constants[133X
+  
+  
+  [24X[33X[0;6Yb_i \cdot b_j = \sum_{k=1}^n c_{ijk} b_k \quad 1\leq i,j \leq n.[133X
+  
+  [124X
+  
+  [33X[0;0YFor  each  [23Xk[123X,  write  [23XC_k = (c_{ijk})_{1 \leq i,j \leq n}[123X for the [23Xn \times n[123X
+  matrix  over  [23XK[123X  with  entries  [23Xc_{ijk}[123X,  these  matrices  are the structure
+  matrices  of [23XL[123X. For [23Xx = x_1 b_1 + \ldots + x_n b_n \in L[123X, let [23X\overline{x} =
+  (x_1,  \ldots,  x_n)  \in  K^n[123X  denote the coefficient vector of [23Xx[123X. Then [23XC_k
+  \overline{x}^{tr}[123X  is  a  column  vector  over  [23XK[123X. We write [23XM_B(x)[123X for the [23Xn
+  \times  n[123X  matrix over [23XK[123X whose [23Xk[123X-th column is [23XC_k \overline{x}^{tr}[123X, this is
+  the adjoint matrix of [23XL[123X with respect to the basis [23XB[123X.[133X
+  
