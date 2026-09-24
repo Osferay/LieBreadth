@@ -3,6 +3,7 @@
 #! @ChapterTitle Preface
 
 #! In this package we compute the breadth of Lie algebras.
+#! The details of the algorithms are available in <Cite Key="breadth" />.
 #! This package also includes functions to compute covered Lie algebras of maximal class using a process called
 #! inflation, which is described by Caranti, Mattarei, and Newman <Cite Key="inflation" />.
 	
