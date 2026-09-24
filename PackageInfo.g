@@ -10,8 +10,8 @@ SetPackageInfo( rec(
 
 PackageName := "liebreadth",
 Subtitle := "Breadth in finite dimensional algebras",
-Version := "0.2",
-Date := "13/08/2025", # dd/mm/yyyy format
+Version := "1.0",
+Date := "24/09/2026", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
