@@ -20,7 +20,7 @@
 #!
 #! Let $L$ be a Lie algebra over a field $K$, and let $B = \{ b_1, \ldots, b_n \}$ be a basis of $L$. 
 #! The multiplication in $L$ is described by structure constants defined by
-#! $$ b_i \cdot b_j = \sum_{k=1}^n c_{ijk} b_k \quad\text{ for } 1\leq i,j \leq n. $$
+#! $$ b_i \cdot b_j = \sum_{k=1}^n c_{ijk} b_k \quad\mbox{ for } 1\leq i,j \leq n. $$
 #! For each $k$, write $C_k = (c_{ijk})_{1 \leq i,j \leq n}$ for the $n \times n$ matrix over $K$ 
 #! with entries $c_{ijk}$, and these matrices are the structure matrices of $L$. For $x = x_1 b_1 + \ldots + x_n b_n \in L$,
 #! let $\overline{x} = (x_1, \ldots, x_n) \in K^n$ denote the coefficient vector of $x$. 
@@ -101,13 +101,13 @@ DeclareGlobalFunction( "TGroupBreadth" );
 #! defined by $[x\otimes a, y\otimes b] = [x,y]\otimes ab$, is a graded Lie algebra. Let $M$ be a maximal 
 #! ideal of $L$ and consider the Lie subalgebra $M^\uparrow = M\otimes A$. Let $D$ be a derivation of $L$ 
 #! of degree 1. Define $D^\uparrow$ by: $D^\uparrow(x\otimes \varepsilon^i)=D(x)\otimes \varepsilon^i$, which is a 
-#! derivation of $M^\uparrow$ of degree 1. Define the derivation $E\in \operatorname{Der} M^\uparrow$ by 
+#! derivation of $M^\uparrow$ of degree 1. Define the derivation $E\in \mathrm{Der} M^\uparrow$ by 
 #! $E(x\otimes \varepsilon^i) = D^\uparrow(x\otimes\varepsilon^i\cdot\varepsilon^{p-1})+1\otimes\partial_\varepsilon(\varepsilon^i)$.
 #! For $s\in L_1\setminus M$, take $D=\mathrm{ad}_s$, and extend it naturally to 
 #! $M^\uparrow$. Denote $E_{s^\prime}$ the derivation defined above. The **inflation** ${}^{M}L$ of $L$ at $M$ by 
 #! $s\in L_1\setminus M$ is the graded Lie algebra obtained as an extension of $M^\uparrow$ by an element 
 #! $s^\prime$, which is the extension of $s$ that induces the derivation $E_{s^\prime}$, that is,
-#! $$ [x\otimes a, s^\prime] = E_{s^\prime}(x\otimes a) = \operatorname{ad}_{s^\prime}(x\otimes\varepsilon^i)+x\otimes\partial_\varepsilon(\varepsilon^i). $$
+#! $$ [x\otimes a, s^\prime] = E_{s^\prime}(x\otimes a) = \mathrm{ad}_{s^\prime}(x\otimes\varepsilon^i)+x\otimes\partial_\varepsilon(\varepsilon^i). $$
 
 #! @Description
 #! Info class for the functions of the inflation of Lie algebras.
