@@ -99,14 +99,14 @@
 <h5>2.1-5 BasisLieCenter</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BasisLieCenter</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns the elements of the basis Lie algebra <span class="SimpleMath">\(L\)</span> that are contained in the center of <span class="SimpleMath">\(L\)</span>.</p>
+<p>Returns the basis elements of the Lie algebra <span class="SimpleMath">\(L\)</span> that are contained in the center of <span class="SimpleMath">\(L\)</span>.</p>
 
 <p><a id="X79539FB282963F71" name="X79539FB282963F71"></a></p>
 
 <h5>2.1-6 BasisLieDerived</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BasisLieDerived</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns the elements of the basis Lie algebra <span class="SimpleMath">\(L\)</span> that are contained in the derived subalgebra of <span class="SimpleMath">\(L\)</span>.</p>
+<p>Returns the basis elements of the Lie algebra <span class="SimpleMath">\(L\)</span> that are contained in the derived subalgebra of <span class="SimpleMath">\(L\)</span>.</p>
 
 <p><a id="X794FAF3F8277235F" name="X794FAF3F8277235F"></a></p>
 
@@ -147,22 +147,22 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTrueClassBreadth</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
 
-<p>Returns whether the Lie algebra <span class="SimpleMath">\(L\)</span> holds the class-breadth conjecture or not.</p>
+<p>Returns whether the class-breadth conjecture holds for the Lie algebra <span class="SimpleMath">\(L\)</span>.</p>
 
 <p><a id="X7F177A627B2917E9" name="X7F177A627B2917E9"></a></p>
 
 <h5>2.2-4 TGroupBreadth</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; TGroupBreadth</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Computes the breadth of the T-groupo <span class="SimpleMath">\(G\)</span>.</p>
+<p>Computes the breadth of the <span class="SimpleMath">\(\mathcal{T}\)</span>-group <span class="SimpleMath">\(G\)</span>.</p>
 
 <p><a id="X79E2250284B5313A" name="X79E2250284B5313A"></a></p>
 
 <h4>2.3 <span class="Heading">Inflation of Lie algebras</span></h4>
 
-<p>A grading for a Lie algebra <span class="SimpleMath">\(L\)</span> is a decomposition L = <span class="SimpleMath">\(\bigoplus_{i=1}^n L_i\)</span> that respects the Lie bracket, <em>i.e.</em> <span class="SimpleMath">\([L_i,L_j]\subseteq L_{i+j}\)</span>.}. Any nilpotent Lie algebras can be graded by taking <span class="SimpleMath">\(L_i = \gamma_i(L)/\gamma_{i+1}(L)\)</span>. Let <span class="SimpleMath">\(L\)</span> be a nilpotent Lie algebra of maximal class. The two-step centralizers are the sets <span class="SimpleMath">\(C_i = C_{L_1}(L_i) = \{x \in L_1 \mid [x,L_i] = 0 \}\)</span> for all <span class="SimpleMath">\(2\leq i \leq c\)</span>. Let <span class="SimpleMath">\(\mathcal{C}=\{C_i\}\setminus L_1\)</span>, we say that a Lie algebra of maximal class is covered if the set <span class="SimpleMath">\(\mathcal{C}\)</span> consist of all one-dimensional subspaces of <span class="SimpleMath">\(L_1\)</span>.</p>
+<p>A grading for a Lie algebra <span class="SimpleMath">\(L\)</span> is a decomposition <span class="SimpleMath">\(L = \bigoplus_{i=1}^n L_i\)</span> that respects the Lie bracket, <em>i.e.</em> <span class="SimpleMath">\([L_i,L_j]\subseteq L_{i+j}\)</span>. All nilpotent Lie algebras can be graded by taking <span class="SimpleMath">\(L_i = \gamma_i(L)/\gamma_{i+1}(L)\)</span>. Let <span class="SimpleMath">\(L\)</span> be a nilpotent Lie algebra of maximal class. The two-step centralizers are the sets <span class="SimpleMath">\(C_i = C_{L_1}(L_i) = \{x \in L_1 \mid [x,L_i] = 0 \}\)</span> for all <span class="SimpleMath">\(2\leq i \leq c\)</span>. Let <span class="SimpleMath">\(\mathcal{C}=\{C_i\}\setminus L_1\)</span>. We say that a Lie algebra of maximal class is covered if the set <span class="SimpleMath">\(\mathcal{C}\)</span> consist of all one-dimensional subspaces of <span class="SimpleMath">\(L_1\)</span>.</p>
 
-<p>Let <span class="SimpleMath">\(L\)</span> be a graded Lie algebra <span class="SimpleMath">\(L = \bigoplus_{i=1}^n L_i\)</span> over <span class="SimpleMath">\(K=\F_q\)</span> for some prime power <span class="SimpleMath">\(q=p^n\)</span>. Consider the field extension <span class="SimpleMath">\(A=K[\varepsilon]/\langle \varepsilon^p \rangle\)</span> which is a vector space over <span class="SimpleMath">\(K\)</span> of dimension <span class="SimpleMath">\(p\)</span>. The algebra <span class="SimpleMath">\(A\)</span> is an associative, commutative and has a unit. The algebra <span class="SimpleMath">\(L\otimes A\)</span> over <span class="SimpleMath">\(K\)</span> defined by <span class="SimpleMath">\([x\otimes a, y\otimes b] = [x,y]\otimes ab\)</span> is a graded Lie algebra. Let <span class="SimpleMath">\(M\)</span> be a maximal ideal of <span class="SimpleMath">\(L\)</span> and consider the Lie subalgebra <span class="SimpleMath">\(M^\uparrow = M\otimes A\)</span>. Let <span class="SimpleMath">\(D\)</span> be a derivation of <span class="SimpleMath">\(L\)</span> of degree 1. Define <span class="SimpleMath">\(D^\uparrow\)</span> via: <span class="SimpleMath">\(D^\uparrow(x\otimes \varepsilon^i)=D(x)\otimes \varepsilon^i\)</span>, this is a derivation of <span class="SimpleMath">\(M^\uparrow\)</span> of degree 1. Define the derivation <span class="SimpleMath">\(E\in \Der M^\uparrow\)</span> by <span class="SimpleMath">\(E(x\otimes \varepsilon^i) = D^\uparrow(x\otimes\varepsilon^i\cdot\varepsilon^{p-1})+1\otimes\partial_\varepsilon(\varepsilon^i)\)</span>. Let <span class="SimpleMath">\(s\in L_1\setminus M\)</span>, take <span class="SimpleMath">\(D=\mathrm{ad}_s\)</span>, and extend it naturally to <span class="SimpleMath">\(M^\uparrow\)</span>. Denote <span class="SimpleMath">\(E_{s^\prime}\)</span> as previously. The <em>inflation</em> <span class="SimpleMath">\({}^{M}L\)</span> of <span class="SimpleMath">\(L\)</span> at <span class="SimpleMath">\(M\)</span> by <span class="SimpleMath">\(s\in L_1\setminus M\)</span> is the graded Lie algebra obtained as an extension of <span class="SimpleMath">\(M^\uparrow\)</span> by an element <span class="SimpleMath">\(s^\prime\)</span>, which is the extension of <span class="SimpleMath">\(s\)</span> that induces the derivation <span class="SimpleMath">\(E_{s^\prime}\)</span>, that is,</p>
+<p>Let <span class="SimpleMath">\(L = \bigoplus_{i=1}^n L_i\)</span> be a graded Lie algebra over <span class="SimpleMath">\(K=\mathbb{F}_q\)</span> for some prime power <span class="SimpleMath">\(q=p^n\)</span>. Consider the field extension <span class="SimpleMath">\(A=K[\varepsilon]/\langle \varepsilon^p \rangle\)</span> which is a vector space over <span class="SimpleMath">\(K\)</span> of dimension <span class="SimpleMath">\(p\)</span>. The algebra <span class="SimpleMath">\(A\)</span> is an associative, commutative algebra with a unit. The algebra <span class="SimpleMath">\(L\otimes A\)</span> over <span class="SimpleMath">\(K\)</span>, defined by <span class="SimpleMath">\([x\otimes a, y\otimes b] = [x,y]\otimes ab\)</span>, is a graded Lie algebra. Let <span class="SimpleMath">\(M\)</span> be a maximal ideal of <span class="SimpleMath">\(L\)</span> and consider the Lie subalgebra <span class="SimpleMath">\(M^\uparrow = M\otimes A\)</span>. Let <span class="SimpleMath">\(D\)</span> be a derivation of <span class="SimpleMath">\(L\)</span> of degree 1. Define <span class="SimpleMath">\(D^\uparrow\)</span> by: <span class="SimpleMath">\(D^\uparrow(x\otimes \varepsilon^i)=D(x)\otimes \varepsilon^i\)</span>, which is a derivation of <span class="SimpleMath">\(M^\uparrow\)</span> of degree 1. Define the derivation <span class="SimpleMath">\(E\in \mathrm{Der} M^\uparrow\)</span> by <span class="SimpleMath">\(E(x\otimes \varepsilon^i) = D^\uparrow(x\otimes\varepsilon^i\cdot\varepsilon^{p-1})+1\otimes\partial_\varepsilon(\varepsilon^i)\)</span>. For <span class="SimpleMath">\(s\in L_1\setminus M\)</span>, take <span class="SimpleMath">\(D=\mathrm{ad}_s\)</span>, and extend it naturally to <span class="SimpleMath">\(M^\uparrow\)</span>. Denote <span class="SimpleMath">\(E_{s^\prime}\)</span> the derivation defined above. The <em>inflation</em> <span class="SimpleMath">\({}^{M}L\)</span> of <span class="SimpleMath">\(L\)</span> at <span class="SimpleMath">\(M\)</span> by <span class="SimpleMath">\(s\in L_1\setminus M\)</span> is the graded Lie algebra obtained as an extension of <span class="SimpleMath">\(M^\uparrow\)</span> by an element <span class="SimpleMath">\(s^\prime\)</span>, which is the extension of <span class="SimpleMath">\(s\)</span> that induces the derivation <span class="SimpleMath">\(E_{s^\prime}\)</span>, that is,</p>
 
 <p class="center">\[ [x\otimes a, s^\prime] = E_{s^\prime}(x\otimes a) = \mathrm{ad}_{s^\prime}(x\otimes\varepsilon^i)+x\otimes\partial_\varepsilon(\varepsilon^i). \]</p>
 
@@ -185,7 +185,7 @@
 <h5>2.3-3 LieTwoStepCentralizers</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieTwoStepCentralizers</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Computes the two step centralizers of the Lie algebra <span class="SimpleMath">\(L\)</span>.</p>
+<p>Computes the two-step centralizers of the Lie algebra <span class="SimpleMath">\(L\)</span>.</p>
 
 <p><a id="X7E24E6DF824913CD" name="X7E24E6DF824913CD"></a></p>
 
@@ -201,21 +201,21 @@
 <h5>2.3-5 PolynomialAlgebra</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PolynomialAlgebra</code>( <var class="Arg">F</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>For a finite field <span class="SimpleMath">\(F\)</span> computes the polynomial algebra <span class="SimpleMath">\(F[x]\)</span>.</p>
+<p>For a finite field <span class="SimpleMath">\(F\)</span>, computes the polynomial algebra <span class="SimpleMath">\(F[x]\)</span>.</p>
 
 <p><a id="X86B86B1784C39326" name="X86B86B1784C39326"></a></p>
 
 <h5>2.3-6 LieCoveredInflated</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieCoveredInflated</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>For <span class="SimpleMath">\(n=2,3,4\)</span> computes the covered Lie algebras of maximal class using the polynomial algebra of dimension <span class="SimpleMath">\(n\)</span>. For n=3 one can directly load the Lie algebra by reading the file "inflation_3.g".</p>
+<p>For <span class="SimpleMath">\(n=2,3,4\)</span>, computes the covered Lie algebras of maximal class using the polynomial algebra of dimension <span class="SimpleMath">\(n\)</span>. For <span class="SimpleMath">\(n=3\)</span>, one can directly load the Lie algebra by reading the file \texttt{inflation\_3.g}.</p>
 
 <p><a id="X828D60C387E6060B" name="X828D60C387E6060B"></a></p>
 
 <h5>2.3-7 LieMinimalQuotientClassBreadth</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LieMinimalQuotientClassBreadth</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Given a covered Lie algebras of maximal class <span class="SimpleMath">\(L\)</span> computes the minimal quotient that not holds the class-breadth conjecture.</p>
+<p>Given a covered Lie algebras of maximal class <span class="SimpleMath">\(L\)</span>, computes the minimal quotient for which the class-breadth conjecture does not hold.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>

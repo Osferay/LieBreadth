@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_preface">
+<Heading>Preface</Heading>
+
+ In this package we compute the breadth of Lie algebras.
+ The details of the algorithms are available in <Cite Key="breadth" />.
+ This package also includes functions to compute covered Lie algebras of maximal class using a process called
+ inflation, which is described by Caranti, Mattarei, and Newman <Cite Key="inflation" />.
+<Section Label="Chapter_Preface_Section_Introduction">
+<Heading>Introduction</Heading>
+
+ Given a finite-dimensional algebra <Math>L</Math>, we define its lower central series as <Math>L = L^1 > L^2 > \dots</Math>, where <Math>L^{i+1} = L^i L</Math>.
+ The algebra <Math>L</Math> is nilpotent if there exists <Math>c \in \mathbb{N}</Math> such that <Math>L^{c+1} = \{0\}</Math>, and the minimal such <Math>c</Math> 
+ is called the class <Math>\mathrm{cl}(L)</Math> of <Math>L</Math>. For a nilpotent algebra <Math>L</Math>, the type of <Math>L</Math>
+ is the vector <Math>(d_1,\dots,d_c)</Math>, where <Math>d_i = \dim L^i</Math>. A nilpotent algebra <Math>L</Math> is said to be of maximal class if
+ the type of <Math>L</Math> is <Math>(2,1,\dots,1)</Math>. The centralizer of <Math>x \in L</Math> is the subspace of <Math>L</Math> 
+ defined by <Math>C_L(x) = \{a \in L \mid ax = 0\}</Math>. For an algebra <Math>L</Math>, we define 
+ <Display> \mathrm{br}(L) = \max \{ \mathrm{br}(x) \mid x \in L\}, \;\; \mbox{ where } \;\; \mathrm{br}(x) = \dim(L) - \dim(C_L(x)). </Display>
+ The class-breadth conjecture asserts that <Math>\mathrm{cl}(L) \leq \mathrm{br}(L)+1</Math> for an algebra <Math>L</Math>.
+ The conjecture holds for nilpotent Lie algebras over infinite fields and for nilpotent associative algebras over arbitrary fields. 
+<P/>
+ Let <Math>L</Math> be a Lie algebra over a field <Math>K</Math>, and let <Math>B = \{ b_1, \ldots, b_n \}</Math> be a basis of <Math>L</Math>. 
+ The multiplication in <Math>L</Math> is described by structure constants defined by
+ <Display> b_i \cdot b_j = \sum_{k=1}^n c_{ijk} b_k \quad\mbox{ for } 1\leq i,j \leq n. </Display>
+ For each <Math>k</Math>, write <Math>C_k = (c_{ijk})_{1 \leq i,j \leq n}</Math> for the <Math>n \times n</Math> matrix over <Math>K</Math> 
+ with entries <Math>c_{ijk}</Math>, and these matrices are the structure matrices of <Math>L</Math>. For <Math>x = x_1 b_1 + \ldots + x_n b_n \in L</Math>,
+ let <Math>\overline{x} = (x_1, \ldots, x_n) \in K^n</Math> denote the coefficient vector of <Math>x</Math>. 
+ Then <Math>C_k \overline{x}^{tr}</Math> is a column vector over <Math>K</Math>. We write <Math>M_B(x)</Math> for the 
+ <Math>n \times n</Math> matrix over <Math>K</Math> whose <Math>k</Math>-th column is <Math>C_k \overline{x}^{\mathrm{tr}}</Math>, which is the adjoint matrix of <Math>L</Math> with respect to the basis <Math>B</Math>. 
+</Section>
+
+</Chapter>
+

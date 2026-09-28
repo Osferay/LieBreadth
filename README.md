@@ -15,7 +15,7 @@ Either place the folder in the pkg subdirectory of your gap folder, or in any ot
 
     gap> LoadPackage("liebreadth");
 	─────────────────────────────────────────────────────────────────────────────
-	Loading  liebreadth 0.1 (Computation of the breadth of Lie algebras)
+	Loading  liebreadth 1.0 (Computation of the breadth of Lie algebras)
 	by Oscar Fernandez Ayala (https://osferay.github.io/).
 	Homepage: https://osferay.github.io/LieBreadth/
 	Report issues at https://github.com/osferay/LieBreadth/issues

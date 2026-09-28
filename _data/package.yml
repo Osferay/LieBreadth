@@ -1,7 +1,7 @@
 name: liebreadth
-version: "0.2"
+version: "1.0"
 license: "GPL-2.0-or-later"
-date: 2025-08-13
+date: 2026-09-24
 description: |
     Breadth in finite dimensional algebras
 
@@ -66,8 +66,8 @@ bibtex: |
     @misc{ liebreadth,
       author =           {Fern{\a'a}ndez Ayala, {\a'O}.},
       title =            {{liebreadth}, {Breadth in finite dimensional algebras}, {V}ersion 0.2},
-      month =            {Aug},
-      year =             {2025},
+      month =            {Sep},
+      year =             {2026},
       note =             {GAP package},
       howpublished =     {\href                                                  {https://osferay.github.io/LieBreadth/}
                           {\texttt{https://osferay.github.io/}\discretionary {}{}{}\texttt{LieBreadth/}}},

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_lie">
+<Heading>Lie algebras and breadth</Heading>
+
+<Section Label="Chapter_Lie_algebras_and_breadth_Section_Attributes">
+<Heading>Attributes</Heading>
+
+<ManSection>
+  <Attr Arg="L" Name="LieClass" Label="for IsLieNilpotent"/>
+ <Description>
+ Computes the class of the nilpotent Lie algebra <Math>L</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="LieType" Label="for IsLieNilpotent"/>
+ <Description>
+ Computes the type of the nilpotent Lie algebra <Math>L</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Prop Arg="L" Name="IsOfMaximalClass" Label="for IsLieNilpotent"/>
+ <Returns><K>true</K> or <K>false</K>
+</Returns>
+ <Description>
+ Returns whether the nilpotent Lie algebra <Math>L</Math> is of maximal class or not.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="StructureMatrices" Label="for IsLieAlgebra"/>
+ <Description>
+ Computes the structure matrices of the nilpotent Lie algebra <Math>L</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="BasisLieCenter" Label="for IsLieAlgebra"/>
+ <Description>
+ Returns the basis elements of the Lie algebra <Math>L</Math> that are contained in the center of <Math>L</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="BasisLieDerived" Label="for IsLieAlgebra"/>
+ <Description>
+ Returns the basis elements of the Lie algebra <Math>L</Math> that are contained in the derived subalgebra of <Math>L</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="LieAdjointMatrix" Label="for IsLieAlgebra"/>
+ <Description>
+ Computes the adjoint matrix of the Lie algebra <Math>L</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="PrintLiePresentation" Label="for IsLieAlgebra"/>
+ <Description>
+ Prints the Lie presentation of the Lie algebra <Math>L</Math>.
+ </Description>
+</ManSection>
+
+</Section>
+
+<Section Label="Chapter_Lie_algebras_and_breadth_Section_Breadth">
+<Heading>Breadth</Heading>
+
+<ManSection>
+  <InfoClass Name="InfoLieBreadth" />
+ <Description>
+ Info class for the functions of the breadth of Lie algebras.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="LieBreadth" Label="for IsLieNilpotent"/>
+ <Description>
+ Computes the breadth of the Lie algebra <Math>L</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Prop Arg="L" Name="IsTrueClassBreadth" Label="for IsLieNilpotent"/>
+ <Returns><K>true</K> or <K>false</K>
+</Returns>
+ <Description>
+ Returns whether the class-breadth conjecture holds for the Lie algebra <Math>L</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Func Arg="G" Name="TGroupBreadth" />
+ <Description>
+ Computes the breadth of the <Math>\mathcal{T}</Math>-group <Math>G</Math>.
+ </Description>
+</ManSection>
+
+</Section>
+
+<Section Label="Chapter_Lie_algebras_and_breadth_Section_Inflation_of_Lie_algebras">
+<Heading>Inflation of Lie algebras</Heading>
+
+ A grading for a Lie algebra <Math>L</Math> is a decomposition <Math>L = \bigoplus_{i=1}^n L_i</Math> that respects the Lie bracket,
+ <Emph>i.e.</Emph> <Math>[L_i,L_j]\subseteq L_{i+j}</Math>. All nilpotent Lie algebras can be graded by taking <Math>L_i = \gamma_i(L)/\gamma_{i+1}(L)</Math>.
+ Let <Math>L</Math> be a nilpotent Lie algebra of maximal class. The two-step centralizers are the sets 
+ <Math>C_i = C_{L_1}(L_i) = \{x \in L_1 \mid [x,L_i] = 0 \}</Math> for all <Math>2\leq i \leq c</Math>.
+ Let <Math>\mathcal{C}=\{C_i\}\setminus L_1</Math>. We say that a Lie algebra of maximal class is covered if the 
+ set <Math>\mathcal{C}</Math> consist of all one-dimensional subspaces of <Math>L_1</Math>.
+<P/>
+ Let <Math>L = \bigoplus_{i=1}^n L_i</Math> be a graded Lie algebra over <Math>K=\mathbb{F}_q</Math> for some prime power <Math>q=p^n</Math>. 
+ Consider the field extension <Math>A=K[\varepsilon]/\langle \varepsilon^p \rangle</Math> which is a vector space over <Math>K</Math> of 
+ dimension <Math>p</Math>. The algebra <Math>A</Math> is an associative, commutative algebra with a unit. The algebra <Math>L\otimes A</Math> over <Math>K</Math>, 
+ defined by <Math>[x\otimes a, y\otimes b] = [x,y]\otimes ab</Math>, is a graded Lie algebra. Let <Math>M</Math> be a maximal 
+ ideal of <Math>L</Math> and consider the Lie subalgebra <Math>M^\uparrow = M\otimes A</Math>. Let <Math>D</Math> be a derivation of <Math>L</Math> 
+ of degree 1. Define <Math>D^\uparrow</Math> by: <Math>D^\uparrow(x\otimes \varepsilon^i)=D(x)\otimes \varepsilon^i</Math>, which is a 
+ derivation of <Math>M^\uparrow</Math> of degree 1. Define the derivation <Math>E\in \mathrm{Der} M^\uparrow</Math> by 
+ <Math>E(x\otimes \varepsilon^i) = D^\uparrow(x\otimes\varepsilon^i\cdot\varepsilon^{p-1})+1\otimes\partial_\varepsilon(\varepsilon^i)</Math>.
+ For <Math>s\in L_1\setminus M</Math>, take <Math>D=\mathrm{ad}_s</Math>, and extend it naturally to 
+ <Math>M^\uparrow</Math>. Denote <Math>E_{s^\prime}</Math> the derivation defined above. The <Emph>inflation</Emph> <Math>{}^{M}L</Math> of <Math>L</Math> at <Math>M</Math> by 
+ <Math>s\in L_1\setminus M</Math> is the graded Lie algebra obtained as an extension of <Math>M^\uparrow</Math> by an element 
+ <Math>s^\prime</Math>, which is the extension of <Math>s</Math> that induces the derivation <Math>E_{s^\prime}</Math>, that is,
+ <Display> [x\otimes a, s^\prime] = E_{s^\prime}(x\otimes a) = \mathrm{ad}_{s^\prime}(x\otimes\varepsilon^i)+x\otimes\partial_\varepsilon(\varepsilon^i). </Display>
+<ManSection>
+  <InfoClass Name="InfoInflation" />
+ <Description>
+ Info class for the functions of the inflation of Lie algebras.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="LieNilpotentGrading" Label="for IsLieNilpotent"/>
+ <Description>
+ Computes a grading of the nilpotent Lie algebra <Math>L</Math> using the lower central series.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="LieTwoStepCentralizers" Label="for IsLieNilpotent"/>
+ <Description>
+ Computes the two-step centralizers of the Lie algebra <Math>L</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Prop Arg="L" Name="IsLieCovered" Label="for IsLieNilpotent"/>
+ <Returns><K>true</K> or <K>false</K>
+</Returns>
+ <Description>
+ Returns whether the Lie algebra <Math>L</Math> is covered or not.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="F" Name="PolynomialAlgebra" Label="for IsField and IsFinite"/>
+ <Description>
+ For a finite field <Math>F</Math>, computes the polynomial algebra <Math>F[x]</Math>.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="n" Name="LieCoveredInflated" Label="for IsInt"/>
+ <Description>
+ For <Math>n=2,3,4</Math>, computes the covered Lie algebras of maximal class using the polynomial algebra of dimension <Math>n</Math>.
+ For <Math>n=3</Math>, one can directly load the Lie algebra by reading the file \texttt{inflation\_3.g}.
+ </Description>
+</ManSection>
+
+<ManSection>
+  <Attr Arg="L" Name="LieMinimalQuotientClassBreadth" Label="for IsLieAlgebra"/>
+ <Description>
+ Given a covered Lie algebras of maximal class <Math>L</Math>, computes the minimal quotient for which the class-breadth conjecture does not hold.
+ </Description>
+</ManSection>
+
+</Section>
+
+</Chapter>
+

@@ -1,0 +1,54 @@
+\begin{theindex}
+
+  \item \texttt  {BasisLieCenter}
+    \subitem for IsLieAlgebra, \hyperpage{4}
+  \item \texttt  {BasisLieDerived}
+    \subitem for IsLieAlgebra, \hyperpage{5}
+
+  \indexspace
+
+  \item \texttt  {InfoInflation}, \hyperpage{6}
+  \item \texttt  {InfoLieBreadth}, \hyperpage{5}
+  \item \texttt  {IsLieCovered}
+    \subitem for IsLieNilpotent, \hyperpage{6}
+  \item \texttt  {IsOfMaximalClass}
+    \subitem for IsLieNilpotent, \hyperpage{4}
+  \item \texttt  {IsTrueClassBreadth}
+    \subitem for IsLieNilpotent, \hyperpage{5}
+
+  \indexspace
+
+  \item \texttt  {LieAdjointMatrix}
+    \subitem for IsLieAlgebra, \hyperpage{5}
+  \item \texttt  {LieBreadth}
+    \subitem for IsLieNilpotent, \hyperpage{5}
+  \item \texttt  {LieClass}
+    \subitem for IsLieNilpotent, \hyperpage{4}
+  \item \texttt  {LieCoveredInflated}
+    \subitem for IsInt, \hyperpage{7}
+  \item \texttt  {LieMinimalQuotientClassBreadth}
+    \subitem for IsLieAlgebra, \hyperpage{7}
+  \item \texttt  {LieNilpotentGrading}
+    \subitem for IsLieNilpotent, \hyperpage{6}
+  \item \texttt  {LieTwoStepCentralizers}
+    \subitem for IsLieNilpotent, \hyperpage{6}
+  \item \texttt  {LieType}
+    \subitem for IsLieNilpotent, \hyperpage{4}
+
+  \indexspace
+
+  \item \texttt  {PolynomialAlgebra}
+    \subitem for IsField and IsFinite, \hyperpage{6}
+  \item \texttt  {PrintLiePresentation}
+    \subitem for IsLieAlgebra, \hyperpage{5}
+
+  \indexspace
+
+  \item \texttt  {StructureMatrices}
+    \subitem for IsLieAlgebra, \hyperpage{4}
+
+  \indexspace
+
+  \item \texttt  {TGroupBreadth}, \hyperpage{5}
+
+\end{theindex}
